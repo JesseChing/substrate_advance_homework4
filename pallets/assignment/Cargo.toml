@@ -32,6 +32,7 @@ sp-io = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-20
 sp-runtime = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-08', version = '4.0.0-dev', default-features = false }
 sp-std = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-08', version = '4.0.0-dev', default-features = false }
 sp-arithmetic = { git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-08', version = '4.0.0-dev', default-features = false }
+sp-keystore = { version = "0.10.0-dev", git = 'https://github.com/paritytech/substrate.git', tag = 'monthly-2021-08', optional = true }
 
 [features]
 default = ['std']
@@ -43,6 +44,7 @@ std = [
 	'sp-runtime/std',
 	'sp-std/std',
 	'sp-arithmetic/std',
+	'sp-keystore',
 	'log/std'
 ]
 try-runtime = ["frame-support/try-runtime"]

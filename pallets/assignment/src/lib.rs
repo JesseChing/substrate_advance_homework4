@@ -2,6 +2,9 @@
 
 pub use pallet::*;
 
+#[cfg(test)]
+mod tests;
+
 #[frame_support::pallet]
 pub mod pallet {
 	//! A demonstration of an offchain worker that sends onchain callbacks
@@ -36,7 +39,7 @@ pub mod pallet {
 	use serde::{Deserialize, Deserializer};
 
 	use serde_json::Value;
-
+ 
 	/// Defines application identifier for crypto keys of this module.
 	///
 	/// Every module that deals with signatures needs to declare its unique identifier for
